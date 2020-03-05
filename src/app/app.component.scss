@@ -1,0 +1,23 @@
+.uk-logo {
+   color: white;
+   &:hover {
+      color: darken(#6080BF, 20);
+   }
+}
+nav {
+   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.uk-navbar-nav {
+   & > li > a {
+      color: white;
+      &:hover {
+         color: darken(#6080BF, 20);
+      }
+   }
+   & > li.uk-active > a {
+      color: #A7C1D9;
+   }
+}
+.uk-navbar-container:not(.uk-navbar-transparent) {
+   background: #6080BF;
+}

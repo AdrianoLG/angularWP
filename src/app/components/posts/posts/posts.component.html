@@ -1,0 +1,9 @@
+<div class="posts uk-grid-column-large uk-child-width-expand@s uk-text-center" uk-grid>
+   <div *ngFor="let post of posts" class="uk-width-1-3@m">
+       <div class="uk-card uk-card-default uk-card-body" routerLink="/posts/{{post.id}}">
+         <h2>{{ post.title.rendered }}</h2>
+         <img [src]="post.x_featured_media">
+         <div class="tiny" [innerHTML]="post.excerpt.rendered"></div>
+       </div>
+   </div>
+ </div>

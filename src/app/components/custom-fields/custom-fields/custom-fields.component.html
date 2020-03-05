@@ -1,0 +1,15 @@
+<div class="politicos uk-grid-column-large uk-child-width-expand@s uk-text-center" uk-grid>
+   <div *ngFor="let politician of politicos" class="uk-width-1-2@m uk-grid-item-match">
+       <div class="uk-card uk-card-default uk-card-body" routerLink="/politicos/{{politicos.id}}">
+         <h2>{{ politician.title.rendered }}</h2>
+         <img [src]="politician.acf.fotografia">
+         <div class="tiny" [innerHTML]="politician.acf.cv"></div>
+       </div>
+   </div>
+</div>
+<ul class="uk-pagination" uk-margin>
+   <li><a><span uk-pagination-previous></span></a></li>
+   <li class="uk-active" #link1><a (click)="goToPage(1)">1</a></li>
+   <li #link2><a (click)="goToPage(2)">2</a></li>
+   <li><a><span uk-pagination-next></span></a></li>
+</ul>
